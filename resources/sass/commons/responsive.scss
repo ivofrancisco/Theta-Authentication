@@ -1,0 +1,159 @@
+// Media queries
+// Device Screen Sizes: 480px, 600px, 768px, 790px, 840px,
+// 992px, 1140px, 1280px 1366px, 1600px, 1920px, 2500px, 3200px, 4000px, 5000px
+
+$s400: 400px;
+$s480: 480px;
+$s500: 500px;
+$s540: 540px;
+$s600: 600px;
+$s720: 720px;
+$s768: 768px;
+$s790: 790px;
+$s840: 840px;
+$s991: 991px;
+$s1040: 1040px;
+$s1140: 1140px;
+$s1280: 1280px;
+$s1366: 1366px;
+$s1440: 1440px;
+$s1600: 1600px;
+$s1800: 1800px;
+$s1920: 1920px;
+$s2300: 2300px;
+$s2500: 2500px;
+$s3200: 3200px;
+$s4000: 4000px;
+$s5000: 5000px;
+
+@mixin s400 {
+    @media (min-width: #{$s400}) {
+        @content;
+    }
+}
+
+@mixin s480 {
+    @media (min-width: #{$s480}) {
+        @content;
+    }
+}
+
+@mixin s500 {
+    @media (min-width: #{$s500}) {
+        @content;
+    }
+}
+
+@mixin s540 {
+    @media (min-width: #{$s540}) {
+        @content;
+    }
+}
+
+@mixin s600 {
+    @media (min-width: #{$s600}) {
+        @content;
+    }
+}
+
+@mixin s768 {
+    @media (min-width: #{$s768}) {
+        @content;
+    }
+}
+
+@mixin s790 {
+    @media (min-width: #{$s790}) {
+        @content;
+    }
+}
+
+@mixin s840 {
+    @media (min-width: #{$s840}) {
+        @content;
+    }
+}
+
+@mixin s991 {
+    @media (min-width: #{$s991}) {
+        @content;
+    }
+}
+
+@mixin s1040 {
+    @media (min-width: #{$s1040}) {
+        @content;
+    }
+}
+
+@mixin s1140 {
+    @media (min-width: #{$s1140}) {
+        @content;
+    }
+}
+
+@mixin s1280 {
+    @media (min-width: #{$s1280}) {
+        @content;
+    }
+}
+
+@mixin s1366 {
+    @media (min-width: #{$s1366}) {
+        @content;
+    }
+}
+
+@mixin s1440 {
+    @media (min-width: #{$s1440}) {
+        @content;
+    }
+}
+
+@mixin s1600 {
+    @media (min-width: #{$s1600}) {
+        @content;
+    }
+}
+
+@mixin s1800 {
+    @media (min-width: #{$s1800}) {
+        @content;
+    }
+}
+
+@mixin s1920 {
+    @media (min-width: #{$s1920}) {
+        @content;
+    }
+}
+
+@mixin s2300 {
+    @media (min-width: #{$s2300}) {
+        @content;
+    }
+}
+
+@mixin s2500 {
+    @media (min-width: #{$s2500}) {
+        @content;
+    }
+}
+
+@mixin s3200 {
+    @media (min-width: #{$s3200}) {
+        @content;
+    }
+}
+
+@mixin s4000 {
+    @media (min-width: #{$s4000}) {
+        @content;
+    }
+}
+
+@mixin s5000 {
+    @media (min-width: #{$s5000}) {
+        @content;
+    }
+}

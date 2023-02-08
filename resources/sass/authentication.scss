@@ -1,0 +1,119 @@
+/********************************
+AUTHENTICATION
+********************************/
+.g-authentication {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $max;
+    height: $max;
+    margin: 0 auto;
+    padding-top: $m3;
+    background: {
+        color: transparent;
+        position: bottom left;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+.s-auth-brand {
+    width: 55%;
+    height: auto;
+    margin: 0 auto $m4 auto;
+
+    img {
+        width: $max;
+        height: auto;
+    }
+}
+
+.s-auth-info {
+    text-align: center;
+    margin-bottom: $m3;
+
+    small {
+        color: $ltGrey;
+        font-family: $fontA;
+        font-size: 1.575rem;
+        letter-spacing: $ls1 * 1.15;
+    }
+}
+
+.g-auth-form {
+    width: 35%;
+    height: auto;
+    padding: 35px 35px;
+    background-color: $white;
+    border-radius: 4px;
+}
+
+.g-auth-email-form {
+    text-align: center;
+
+    i {
+        display: block;
+        margin: 0 auto $m3 auto;
+        color: rgba(89, 206, 40, 0.85);
+        font-size: 3.65rem;
+    }
+
+    h4 {
+        margin-bottom: $m1 * 1.5;
+        color: $midBlue;
+        font-size: 2.75rem;
+        font-weight: 500;
+        letter-spacing: $ls1 * 1.75;
+    }
+
+    small {
+        display: block;
+        margin-bottom: $m4;
+        color: $midGrey;
+        font-weight: 300 !important;
+        line-height: 27px;
+    }
+
+    .btn-primary {
+        background-color: #718d9e;
+        &:hover {
+            background-color: $blue;
+            color: $drkWhite;
+        }
+    }
+}
+
+/********************************
+FORGOT KEEP
+********************************/
+#s-forgot-keep {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: $max;
+    height: auto;
+    margin-bottom: $m;
+    padding: 0 0 $m 0;
+
+    label {
+        color: $midGrey;
+        font-weight: 300;
+        text-transform: none;
+    }
+
+    p {
+        display: inline;
+        text-align: left;
+        color: $midGrey;
+    }
+
+    a {
+        display: inline;
+        padding-top: $m * 0.75;
+        text-decoration: none;
+        color: $ltBlue;
+        text-align: right;
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+}

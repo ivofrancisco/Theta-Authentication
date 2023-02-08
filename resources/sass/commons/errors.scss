@@ -1,0 +1,137 @@
+/********************************
+MESSAGE WRAPPER
+********************************/
+.s-message-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $max;
+    min-height: $max;
+    padding-top: $m10;
+    //background-color: $drkWhite;
+}
+
+.s-message {
+    width: $max * 0.75;
+    min-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+
+    h4 {
+        margin-bottom: $m * 0.5;
+        color: $drkBlue;
+        font-family: $fontA;
+        font-size: 2.6rem;
+        letter-spacing: $ls2 * 1.15;
+
+        @include s768 {
+            margin-bottom: $m * 1.325;
+            font-size: 3rem;
+            letter-spacing: $ls2 * 1.2;
+        }
+
+        @include s991 {
+            font-size: 2.325rem;
+            letter-spacing: $ls3 * 1.15;
+        }
+
+        @include s1280 {
+            margin-bottom: $m2 * 1.25;
+            font-size: 2.65rem;
+            letter-spacing: $ls4 * 1.15;
+        }
+    }
+
+    p {
+        display: block;
+        width: $max * 0.74;
+        margin: 0 auto $m * 1.15 auto;
+        color: rgba(19, 38, 54, 0.65);
+        font-family: $fontA;
+        font-size: 1.465rem;
+        font-weight: 300;
+        letter-spacing: $ls2 * 1.25;
+        line-height: 2.65rem;
+
+        @include s768 {
+            font-size: 1.525rem;
+            letter-spacing: $ls2 * 1.325;
+            line-height: 2.75rem;
+        }
+
+        @include s991 {
+            margin: 0 auto $m2 * 1.65 auto;
+            font-size: 1.725rem;
+            letter-spacing: $ls2 * 1.75;
+            line-height: 2.8rem;
+        }
+
+        @include s1440 {
+            font-size: 1.665rem;
+            line-height: 3.1rem;
+        }
+
+        @include s1600 {
+            font-size: 1.675rem;
+        }
+
+        @include s1800 {
+            font-size: 1.685rem;
+        }
+
+        @include s1920 {
+            font-size: 1.7rem;
+        }
+
+        @include s2500 {
+            font-size: 1.715rem;
+        }
+    }
+    .btn {
+        display: block;
+        width: 190px;
+        margin: 0 auto;
+        padding: 1.45rem 0 1.15rem 0;
+        background-color: rgba(149, 131, 57, 0.9);
+        color: $white;
+        border-color: rgba(149, 131, 57, 0.9);
+        font-family: $fontA;
+        font-size: 1.05rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.125rem;
+        border-radius: 0;
+
+        @include s991 {
+
+            width: 205px;
+            padding: 1.65rem 0 1.45rem 0;
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        &:hover {
+            background-color: $dark;
+            border-color: $dark;
+        }
+    }
+}
+
+h1.oops {
+    margin-bottom: $m3 * 1.25;
+    padding-left: 0 !important;
+    text-align: center;
+    font-size: 18.5rem;
+    font-weight: 700;
+    letter-spacing: $ls4;
+    line-height: 1.1;
+    color: $gold;
+    background: radial-gradient(rgba(29, 31, 32, 0.20),rgba(24, 27, 28, 0.30)
+    ), url("/storage/images/login.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -text-fill-color: transparent;
+    background-clip: text;
+}

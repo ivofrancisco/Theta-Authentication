@@ -1,0 +1,326 @@
+.blue {
+    background-color: $blue;
+}
+
+.orange {
+    background-color: $orange;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.secondary {
+    background-color: $secondary;
+}
+
+.success {
+    background-color: $success;
+}
+
+.danger {
+    background-color: $danger;
+}
+
+.warning {
+    background-color: $warning;
+}
+
+.info {
+    background-color: $info;
+}
+
+.light {
+    background-color: $light;
+}
+
+.dark {
+    background-color: $dark;
+}
+
+
+// Useful Colors
+.v-blue {
+    color: $vBlue;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.success {
+    color: $success;
+}
+
+.danger {
+    color: $danger;
+}
+
+.warning {
+    color: $warning;
+}
+
+.info {
+    color: $info;
+}
+
+.light {
+    color: $light;
+}
+
+// Useful Backgrounds
+.v-blue-bg {
+    color: $vBlue;
+}
+
+.secondary-bg {
+    background-color: $secondary;
+}
+
+.success-bg {
+    background-color: $success;
+}
+
+.danger-bg {
+    background-color: $danger;
+}
+
+.warning-bg {
+    background-color: $warning;
+}
+
+.info-bg {
+    background-color: $info;
+}
+
+.light-bg {
+    background-color: $light;
+}
+
+a.txt-primary {
+    color: $primary;
+    &:hover {
+        color: #335895;
+    }
+}
+
+.txt-primary {
+    color: $primary;
+}
+
+.txt-secondary,
+a.txt-secondary {
+    color: $secondary;
+    &:hover {
+        color: #656567;
+    }
+}
+
+.txt-success,
+a.txt-success {
+    color: $success;
+    &:hover {
+        color: #4e8c34;
+    }
+}
+
+a.txt-danger {
+    color: $danger;
+    &:hover {
+        color: #d1192b;
+    }
+}
+
+.txt-danger {
+    color: $danger;
+}
+
+.txt-warning,
+a.txt-warning {
+    color: $warning;
+    &:hover {
+        color: #c7ac24;
+    }
+}
+
+.txt-info,
+a.txt-info {
+    color: $info;
+    &:hover {
+        color: #048b7f;
+    }
+}
+
+.light,
+a.light {
+    background-color: $light;
+    &:hover {
+        color: #c2c5c9;
+    }
+}
+
+.dark,
+a.dark {
+    background-color: $dark;
+    &:hover {
+        color: #141517;
+    }
+}
+
+.alert-primary {
+    color: $primary;
+}
+
+.alert-secondary {
+    color: $secondary;
+}
+
+.alert-success {
+    color: $midBlue;
+}
+
+.alert-danger {
+    background-color: #f7e4e5;
+    color: $danger;
+}
+
+.alert-warning {
+    color: $warning;
+}
+
+.alert-info {
+    color: $info;
+}
+
+.alert-dark {
+    color: $dark;
+}
+
+.border-primary {
+    border-color: $primary !important;
+}
+
+.border-secondary {
+    border-color: $secondary !important;
+}
+
+.border-success {
+    border-color: $success !important;
+}
+
+.border-danger {
+    border-color: $danger !important;
+}
+
+.border-warning {
+    border-color: $warning !important;
+}
+
+.border-info {
+    border-color: $info !important;
+}
+
+.border-dark {
+    border-color: $dark !important;
+}
+
+.brick {
+    //color: #bd7c4b;
+    color: rgba(189, 124, 75, 0.55);
+}
+
+.green {
+    //color: #57a567;
+    color: rgba(87, 165, 103, 0.55);
+}
+
+.red {
+    //color: #f44335;
+    color: rgba(244, 67, 53, 0.55);
+
+}
+
+.blueish {
+    //color: #085fa7;
+    color: rgba(8, 95, 167, 0.55);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontA;
+    font-weight: 600;
+}
+
+h1 {
+    margin-bottom: $m2 * 1.05;
+    font-size: 3.6rem;
+    letter-spacing: $ls1 * 1.25;
+}
+
+h2 {
+    margin-bottom: $m2 * 1.05;
+    font-size: 2.9rem;
+    letter-spacing: $ls1 * 1.05;
+}
+
+h3 {
+    margin-bottom: $m2;
+    font-size: 2.55rem;
+    letter-spacing: $ls1 * 0.85;
+}
+
+h4 {
+    margin-bottom: $m2;
+    font-size: 2rem;
+    letter-spacing: $ls1 * 0.85;
+}
+
+h5 {
+    margin-bottom: $m1 * 0.75;
+    font-size: 1.8rem;
+    letter-spacing: $ls1 * 0.6;
+}
+
+h6 {
+    margin-bottom: $m * 0.05;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: $ls2 * 0.7;
+}
+
+p {
+    font-family: $fontA;
+    font-weight: 300;
+}
+
+.g-paragraph-1 {
+    font-size: 1.575rem;
+    line-height: 25px;
+    letter-spacing: $ls2 * 1.25;
+}
+
+.g-paragraph-p2 {
+    font-size: 1.5rem;
+    line-height: 23px;
+    letter-spacing: $ls2 * 1.05;
+}
+
+.g-paragraph-p3 {
+    font-size: 1.15rem;
+    line-height: 17px;
+    letter-spacing: $ls2;
+}
+
+.g-paragraph-p4 {
+    font-size: 1.05rem;
+    line-height: 14px;
+    letter-spacing: $ls1 * 1.75;
+}
+
+.lg-img {
+    width: 23%;
+}

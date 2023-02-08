@@ -1,0 +1,296 @@
+/********************************
+GLOBALS
+********************************/
+html {
+    width: $max;
+    height: $max;
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    width: $max;
+    height: $max;
+    padding: 0;
+    background-color: $drkWhite;
+    font-family: $fontA;
+    font-size: 1.4rem;
+    z-index: -1;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/********************************
+WRAPPERS
+********************************/
+.g-wrapper {
+    @include wrap;
+}
+
+/********************************
+MAIN CONTENT
+********************************/
+.g-main-content {
+    @include wrap;
+    position: relative;
+    min-height: 300px;
+    padding: 150px 0 $m10 0;
+    z-index: 9;
+}
+
+/********************************
+CONTENT
+********************************/
+.g-content {
+    width: $max;
+    height: auto;
+}
+
+/********************************
+CARDS
+********************************/
+.card {
+    @include box;
+    @include flex1;
+    border: none;
+
+    &.sm-card {
+        padding-bottom: 14px;
+    }
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: .75rem 0;
+    background-color: transparent;
+
+    h4 {
+        @include heading2;
+        margin-bottom: $m * 1.5;
+        color: $midBlue;
+    }
+
+    span {
+        margin-bottom: $m;
+        color: $ltGrey;
+        font-size: 1.35rem;
+        font-weight: 400 !important;
+        letter-spacing: $ls;
+    }
+    .btn-mini {
+        background-color: #718d9e;
+        color: $white;
+        border-color: #718d9e;
+    }
+}
+
+.card-body {
+    padding: 0;
+}
+
+/********************************
+NOTIFICATIONS
+********************************/
+.g-header-nav-item,
+.g-header-settings,
+.g-profile-alert {
+    position: relative;
+    width: 39px;
+    height: auto;
+    cursor: pointer;
+
+    i {
+        color: $drkWhite;
+        font-size: 2.525rem;
+    }
+
+    span {
+        position: absolute;
+        top: -9px;
+        right: -7px;
+        width: 21px;
+        height: 21px;
+        padding-top: 3px;
+        color: $white;
+        text-align: center;
+        font-family: $fontA;
+        font-size: 1.1rem;
+        font-weight: 400;
+        border-radius: $max;
+    }
+}
+
+.g-header-nav-item,
+.g-header-profile {
+    margin-left: $m5;
+}
+
+.g-header-settings {
+    margin-left: $m4;
+}
+
+/********************************
+TOP BAR
+********************************/
+.topbar {
+    position: fixed;
+    width: $max;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+
+/********************************
+PAGE HEADER
+********************************/
+.g-page-header {
+    width: $max;
+    height: auto;
+    margin: $m3 * 1.25 0 $m2 * 1.35 0;
+    text-align: left;
+
+    &.action {
+        margin: $m3 * 1.75 0 $m2 * 1.35 0;
+        text-align: right;
+    }
+
+    h2 {
+        margin-bottom: $m * 1.25;
+        color: $midBlue;
+        font-family: $fontA;
+        font-size: 3.15rem;
+        font-weight: 400;
+    }
+
+    .g-paragraph-1 {
+        color: $grey;
+    }
+}
+
+/********************************
+MANAGE ITEMS / ACCESS LANGUAGES
+********************************/
+.g-manage-items,
+.g-access-languages {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: $max;
+    min-height: 25px;
+    margin-bottom: $m1 * 1.75;
+}
+
+.g-manage-items {
+    .btn-mini {
+        width: 32px;
+        height: 32px;
+        margin-left: $m1 * 1.75;
+        line-height: 26px;
+    }
+}
+
+.g-access-languages {
+    .btn-mini {
+        width: 30px;
+        height: auto;
+        margin-left: $m1 * 1.5 !important;
+        padding: 0 !important;
+        line-height: 18px;
+        border-radius: 4px;
+        img {
+            width: $max;
+            height: auto;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+/********************************
+NAVBAR & TABLES DROPDOWN MENUS
+********************************/
+.g-nav-item-menu,
+.g-header-dropdown,
+.g-row-actions-menu {
+    display: none;
+    position: absolute;
+    height: auto;
+    margin-top: 0 !important;
+    padding: $m * 1.45 0 $m 0;
+    background-color: $white;
+    opacity: 0;
+    z-index: 9;
+    border-radius: 2px;
+    transition: 0.3s cubic-bezier(0.4, 0.25, 0.1, 1);
+
+    a,
+    .btn.btn-link {
+        display: block;
+        width: $max;
+        height: auto;
+        padding: $m * 0.75 $m1 * 1.175;
+        text-decoration: none;
+        color: $grey;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: $ls2;
+        &:hover {
+            background-color: rgba(238, 240, 247, 0.75) !important;
+            color: $ltDark;
+        }
+    }
+}
+
+.g-nav-item-menu {
+    top: 4.6rem;
+    left: 0;
+    width: 114px;
+    padding-left: $m;
+}
+
+.g-header-dropdown {
+    bottom: 0;
+    right: 35px;
+    width: 75px;
+    background-color: green;
+}
+
+.g-row-actions-menu {
+    top: 1.6rem;
+    right: 35px;
+    width: 75px;
+}
+
+.g-nav-item {
+    position: relative;
+
+    &.opened {
+        .g-nav-item-menu {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.g-profile-header {
+    &.opened {
+        .g-header-dropdown {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.g-row-item-manager {
+    &.opened {
+        .g-row-actions-menu {
+            display: block;
+            opacity: 1;
+        }
+    }
+}

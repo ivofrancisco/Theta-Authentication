@@ -21,3 +21,26 @@
     </form>
 </div>
 <!-- END: AUTHENTICATION  -->
+
+<form action="" id="p-two-factor-form">
+    <p>
+        A autenticação de dois fatores foi ativada. Digitalize o seguinte código QR usando o aplicativo
+        autenticador do seu
+        telefone.
+    </p>
+    <!-- Begin: s-qrcode -->
+    <div class="s-qrcode">
+
+    </div>
+    <!-- End: s-qrcode -->
+    <p>
+        Guarde estes códigos de recuperação num gestor de palavras-passe seguro. Eles podem ser usados para
+        recuperar o acesso à
+        sua conta.
+    </p>
+    <!-- Begin: s-recovery-codes -->
+    <div class="s-recovery-codes">
+
+    </div>
+    <!-- End: s-recovery-codes -->
+</form>

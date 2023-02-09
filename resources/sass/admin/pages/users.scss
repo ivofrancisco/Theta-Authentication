@@ -1,0 +1,76 @@
+/********************************
+PROFILE MEDIA
+********************************/
+.s-profile-media {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    min-height: 90px;
+
+    div {
+        width: 64px;
+        height: 64px;
+        margin-right: $m4;
+        background-color: $drkWhite;
+        border-radius: 100%;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .btn-primary {
+        background-color: $white;
+        color: $midGrey;
+        font-weight: 300;
+        border: 1px solid rgba(166, 169, 181, 0.425);
+        &:hover {
+            background-color: $primary;
+            color: $white;
+            border: 1px solid $primary;
+        }
+    }
+}
+
+/********************************
+PROFILE FORMS
+********************************/
+#p-alter-password-form,
+#p-edit-profile-form {
+    .btn-primary {
+        float: right;
+    }
+}
+
+/********************************
+QR CODE
+********************************/
+.s-qrcode {
+    width: 55%;
+    min-height: 100px;
+    margin-bottom: $m5;
+}
+
+/********************************
+RECOVERY CODES
+********************************/
+.s-recovery-codes {
+    width: 70%;
+    min-height: 100px;
+    margin-bottom: $m5;
+    padding: $m2 $m2;
+    background-color: $drkWhite;
+    border-radius: 6px;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: $m;
+        color: $grey;
+        font-size: 1.35rem;
+        font-weight: 400;
+        letter-spacing: $ls;
+    }
+}

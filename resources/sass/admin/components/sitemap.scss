@@ -1,0 +1,168 @@
+/********************************
+SITEMAP SLIDER
+********************************/
+#s-sitemap-slider {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	width: $max;
+	min-height: 400px;
+	max-height: 1200px;
+}
+
+/********************************
+SLIDER CONTENT
+********************************/
+#s-stmpsld-content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 85%;
+	min-height: 400px;
+}
+
+/********************************
+SLIDES
+********************************/
+.s-stmpsld-slide {
+	display: none;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 85%;
+	min-height: 400px;
+	opacity: 0;
+
+	&.current {
+		display: flex;
+		opacity: 1;
+	}
+}
+
+.g-stmp-title {
+	margin-bottom: $m3;
+	text-align: left;
+}
+
+/********************************
+MEDIA
+********************************/
+.s-stmpsld-media {
+	width: 63%;
+	min-height: 300px;
+	margin-right: 6%;
+
+	img {
+		width: $max;
+		height: auto;
+		border: 1px solid rgba(178, 178, 178, 0.35);
+	}
+}
+
+/********************************
+INFO
+********************************/
+.s-stmpsld-info {
+	width: 34.5%;
+	min-height: 120px;
+	padding-top: $m1;
+}
+
+.s-stmpsld-inf-item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: $m1 * 1.7;
+
+	span {
+		display: block;
+		width: 13px;
+		height: 13px;
+		margin-right: 11px;
+		border-radius: $max;
+	}
+
+	p {
+		display: block;
+		margin-bottom: 0 !important;
+		font-size: 1.45rem;
+		font-weight: 400;
+	}
+}
+
+/********************************
+INDICATORS
+********************************/
+#s-stmpsld-indicators {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 57px;
+	min-height: 200px;
+	margin-right: 2%;
+}
+
+.s-stmp-indicator {
+	width: $max;
+	min-height: 30px;
+	margin-bottom: $m2 * 1.5;
+	cursor: pointer;
+
+	&:hover,
+	&.active {
+		img {
+			opacity: 1;
+		}
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	h6 {
+		margin-bottom: $m1;
+        font-size: 1.05rem;
+        font-weight: 500;
+        letter-spacing: $ls1 * 1.75;
+	}
+
+	img {
+		width: $max;
+		height: auto;
+		opacity: 0.3;
+		border: 1px solid rgba(178, 178, 178, 0.35);
+	}
+}
+
+/********************************
+INFO REFS
+********************************/
+.blue-ref {
+	background-color: #2979ff;
+}
+
+.red-ref {
+	background-color: #ef5350;
+}
+
+.green-ref {
+	background-color: #689f38;
+}
+
+.purple-ref {
+	background-color: #ba68c8;
+}
+
+.pink-ref {
+	background-color: #ec5f8f;
+}
+
+.orange-ref {
+	background-color: #ff6d00;
+}
+
+.yellow-ref {
+	background-color: #ffeb3b;
+}
+

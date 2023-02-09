@@ -1,0 +1,42 @@
+/********************************
+RICH TEXT EDITOR
+********************************/
+#article_body,
+#banner_body,
+#body {
+    display: none;
+}
+
+/** RICH TEXT CONTROLLER
+********************************/
+.g-rich-text-controller {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: $max;
+    height: auto;
+    margin-bottom: 0 !important;
+    padding: $m1 * 1.1 $m1 * 1.25;
+    border: 1px solid rgba(166, 169, 181, 0.325);
+    border-radius: 4px 4px 0 0;
+}
+
+.g-controller-option {
+    width: 56px;
+    height: 30px;
+    line-height: 32px;
+    margin-right: $m1;
+    background-color: rgba(198, 205, 210, 0.2);
+    color: $dark;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(198, 205, 210, 0.5);
+    }
+
+    i {
+        font-size: 1.325rem;
+    }
+}

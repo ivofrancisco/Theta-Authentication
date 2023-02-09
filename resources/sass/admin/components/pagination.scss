@@ -1,0 +1,91 @@
+/********************************
+SMALLER PAGINATION
+********************************/
+.pagination {
+    float: right;
+    margin-top: $m3 * 1.25;
+
+    .page-link {
+        display: block;
+        position: relative;
+        width: 39px;
+        height: 35px;
+        padding: 0 0;
+        text-align: center;
+        font-family: $fontA;
+        line-height: 36px;
+        background-color: #fff;
+        color: $dark;
+        font-size: 1.725rem;
+        border-radius: 3px;
+        border: none;
+    }
+
+    .page-item {
+        &.active a.page-link {
+            background-color: $ltBlue;
+            color: $drkWhite;
+            border-color: $ltBlue;
+        }
+
+        &.disabled {
+            .page-link {
+                font-size: 1.25rem;
+                line-height: 42px;
+                background-color: $drkWhite;
+            }
+
+            .page-link i {
+                color: $drkWhite;
+            }
+        }
+
+        &.active {
+            .page-link {
+                background-color: #434d5a;
+            }
+        }
+    }
+
+    .page-link {
+        margin: 0 6px;
+        &:hover {
+            background-color: rgba(82, 99, 127, 1);
+            color: $white;
+        }
+
+        &.handler {
+            background-color: rgba(82, 99, 127, 1);
+            color: $white;
+            border-color: transparent;
+            font-size: 1.15rem;
+            line-height: 40px;
+            .page-link i {
+                color: $drkWhite;
+            }
+        }
+    }
+}
+
+.page-item {
+    &:first-of-type a.page-link {
+        line-height: 37px;
+        font-size: 2.65rem !important;
+    }
+
+    &:last-of-type a.page-link {
+        line-height: 37px;
+        font-size: 2.65rem !important;
+    }
+}
+
+.page-item.disabled {
+    &:first-of-type span.page-link {
+        line-height: 36px;
+        font-size: 2.65rem !important;
+    }
+    &:last-of-type span.page-link {
+        line-height: 36px;
+        font-size: 2.65rem !important;
+    }
+}

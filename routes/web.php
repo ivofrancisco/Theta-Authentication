@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-//    dd(\Illuminate\Support\Facades\Auth::User());
-    return view('admin');
-})->middleware(['auth', 'verified']);
+// Route::get('/home', function () {
+//     return view('test');
+// })->middleware(['auth', 'verified']);
+
+// ---------------------------------
+// ADMIN PANEL ROUTES
+// ---------------------------------
+Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'verified']], function () {
+    Route::get('/home', [AdminController::class, 'home'])->name('admin.home');
+
+    Route::get('/admin/users/{id}/profile', [UserController::class, 'profile'])->name('admin.users.profile');
+
+});

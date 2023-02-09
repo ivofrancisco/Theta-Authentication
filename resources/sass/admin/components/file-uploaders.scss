@@ -1,0 +1,133 @@
+/********************************
+UPLOADERS
+********************************/
+.s-uploads-wrapper,
+.s-photos-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.g-uploader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: auto;
+    margin-right: 2.85%;
+    margin-bottom: $m3;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:nth-of-type(8n) {
+        margin-right: 0;
+    }
+
+    label {
+        display: block;
+        width: $max;
+    }
+
+    &.brd {
+        border: 1px solid rgba(166, 169, 181, 0.27);
+    }
+
+    &.lg-img {
+        width: 16%;
+    }
+
+    &.gallery {
+        width: 8%;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .g-manage-photo {
+        display: none;
+        top: -13px;
+        right: -11px;
+    }
+
+    &.icon {
+        min-height: 72px;
+        width: 94px;
+        background-color: rgba(198, 205, 210, 0.2);
+        color: rgba(85, 110, 230, 0.65);
+        font-size: 3.2rem;
+        border-radius: 4px;
+    }
+}
+
+#g-profile-uploader {
+    position: absolute;
+    left: 24px;
+    bottom: -37px;
+    width: 89px !important;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    border-radius: $max;
+
+    img {
+        position: relative;
+        width: $max;
+        height: auto;
+        border: 6px solid $white;
+        border-radius: $max;
+        z-index: 3;
+    }
+
+    .g-manage-photo {
+        display: block;
+        right: -6px;
+        bottom: -1px;
+    }
+}
+
+.g-manage-photo {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: $thinGrey;
+    text-align: center;
+    border-radius: $max;
+    z-index: 6;
+
+    i {
+        color: $white;
+        line-height: 33px;
+        font-size: 1.55rem;
+    }
+
+    .remove {
+        color: rgba(239, 55, 73, 0.7);
+    }
+}
+
+.loaded {
+    .g-manage-photo {
+        display: block;
+    }
+    img {
+        border: 7px solid $white;
+        border-radius: 5px;
+    }
+}
+
+.clickable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $max;
+    min-height: $max;
+    background-color: transparent;
+    z-index: 9;
+}

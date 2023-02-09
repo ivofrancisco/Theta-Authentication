@@ -1,0 +1,78 @@
+/********************************
+DASHBOARD TABS
+********************************/
+.s-dashboard-tabs {
+    @include wrap;
+    width: $max !important;
+    overflow: hidden;
+    padding: 35px;
+    background-color: $white;
+    border-radius: 4px;
+
+    .s-dsh-tabs-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        width: $max;
+        height: 42px;
+        margin-bottom: $m3;
+        padding: 0 ;
+        border-bottom: 1.65px solid rgba(178, 178, 178, 0.275);
+    }
+
+    .btn-link {
+        color: $drkBlue;
+    }
+
+    .s-dsh-tabs-link {
+        position: relative;
+        width: 220px;
+        margin-left: $m1 * 1.875;
+        margin-bottom: 0 !important;
+        padding: $m1 0;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 400;
+        cursor: pointer;
+        border-radius: 0;
+
+        &.active {
+            color: $ltBlue;
+            border-bottom: 2px solid $ltBlue;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .s-dsh-tabs-content {
+        width: $max;
+        height: $max;
+    }
+
+    .s-dsh-content-item {
+        display: none;
+        width: $max;
+        height: auto;
+        padding-top: $m1 * 1.25;
+        background: transparent;
+
+        &.opened {
+            display: block;
+        }
+
+    }
+
+    .btn-primary {
+        display: block;
+        float: right;
+        background-color: #335895;
+        color: $drkWhite;
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}

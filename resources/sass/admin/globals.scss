@@ -40,6 +40,34 @@ MAIN CONTENT
 }
 
 /********************************
+MAIN CONTENT SMALL
+********************************/
+.g-main-content-sm {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 150px 0 $m10 0;
+    z-index: 9;
+
+    @include s1140 {
+        width: 60%;
+    }
+
+    @include s1440 {
+        width: 55%;
+    }
+
+    @include s1600 {
+        width: 50%;
+    }
+
+    .g-form-wrapper {
+        margin-bottom: 45px;
+    }
+}
+
+/********************************
 CONTENT
 ********************************/
 .g-content {
@@ -64,7 +92,7 @@ CARDS
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: .75rem 0;
+    padding: 0.75rem 0;
     background-color: transparent;
 
     h4 {
@@ -208,7 +236,6 @@ MANAGE ITEMS / ACCESS LANGUAGES
         }
     }
 }
-
 
 /********************************
 NAVBAR & TABLES DROPDOWN MENUS

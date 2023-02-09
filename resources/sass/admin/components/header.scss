@@ -1,0 +1,51 @@
+/********************************
+HEADER
+********************************/
+.g-header {
+    width: $max;
+    height: auto;
+    background-color: $drkBlue;
+    .g-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 70px !important;
+    }
+}
+
+.g-header-brand {
+    width: 1.825%;
+    height: auto;
+    margin: 0 !important;
+}
+
+.g-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 12%;
+    height: auto;
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    img {
+        width: 26px;
+        height: 26px;
+        border-radius: 100%;
+    }
+}
+
+.g-header-profile {
+    position: relative;
+    color: $grey;
+    cursor: pointer;
+    border-radius: 100%;
+    background: {
+        position: bottom center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}

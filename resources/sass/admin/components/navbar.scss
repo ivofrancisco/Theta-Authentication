@@ -1,0 +1,45 @@
+/********************************
+NAVBAR
+********************************/
+.g-navbar {
+    width: $max;
+    height: auto;
+    background-color: $white;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: $max;
+        height: auto;
+        margin-bottom: 0 !important;
+        padding: 1px 0 0 0;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        height: 45px;
+        margin-right: 40px;
+        padding-top: 2px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+
+        &:hover,
+        &.active {
+            border-color: $midBlue;
+        }
+
+        span {
+            display: block;
+            font-family: $fontA;
+            font-size: 1.45rem;
+            font-weight: 400;
+            letter-spacing: $ls1 * 1.15;
+        }
+    }
+
+}
+

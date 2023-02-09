@@ -10,14 +10,15 @@
 		<div class="g-form-wrapper">
 			<h4>Informações Pessoais</h4>
 			<!-- BEGIN: EDIT PROFILE FORM  -->
-			<form action="" id="p-edit-profile-form">
+			<form action="{{ route('user-profile-information.update') }}" id="p-edit-profile-form" method="POST">
 				@csrf
+				@method('PUT')
 				<!-- Begin: form-group -->
 				<div class="form-group">
 					<label for="job">Função</label>
 					<input type="text" name="job" class="form-control brd md" id="job"
-						value="{{ old('email', auth()->user()->job) }}" />{{-- <small
-						class="form-text text-danger">{!! $errors->first('job') !!}</small> --}}
+						value="{{ old('job', auth()->user()->job) }}" />
+					<small class="form-text text-danger">{!! $errors->first('job') !!}</small>
 				</div>
 				<!-- End: form-group -->
 
@@ -25,8 +26,8 @@
 				<div class="form-group">
 					<label for="description">Descrição</label>
 					<textarea name="description" class="form-control textarea brd md"
-						id="description">{{ old('email', auth()->user()->description) }}</textarea>{{-- <small
-										class="form-text text-danger">{!! $errors->first('description') !!}</small> --}}
+						id="description">{{ old('description', auth()->user()->description) }}</textarea><small
+						class="form-text text-danger">{!! $errors->first('description') !!}</small>
 				</div>
 				<!-- End: form-group -->
 
@@ -45,14 +46,14 @@
 					<div class="form-group col-sm-12 col-md-5">
 						<label for="first-name">Primeiro Nome</label>
 						<input type="text" name="first_name" class="form-control brd md" id="first-name"
-							value="{{ old('email', auth()->user()->first_name) }}">
+							value="{{ old('first_name', auth()->user()->first_name) }}">
 					</div>
 					<!-- End: form-group -->
 					<!-- Begin: form-group -->
 					<div class="form-group col-sm-12 col-md-7">
 						<label for="last-name">Último Nome</label>
 						<input type="text" name="last_name" class="form-control brd md" id="last-name"
-							value="{{ old('email', auth()->user()->last_name) }}">
+							value="{{ old('last_name', auth()->user()->last_name) }}">
 					</div>
 					<!-- End: form-group -->
 				</div>
@@ -70,7 +71,7 @@
 					<div class="form-group col-sm-12 col-md-5">
 						<label for="phone">Telefone</label>
 						<input type="text" name="phone" class="form-control brd md" id="phone"
-							value="{{ old('email', auth()->user()->phone) }}">
+							value="{{ old('phone', auth()->user()->phone) }}">
 					</div>
 					<!-- End: form-group -->
 				</div>
@@ -139,8 +140,13 @@
 		<!-- Begin: g-form-wrapper -->
 		<div class="g-form-wrapper">
 			<h4>Alterar Palavra-passe</h4>
+			@if(session('status') == 'password-updated')
+			<div class="alert alert-success" role="alert">
+				A palavra-passe foi atualizada com sucesso.
+			</div>
+			@endif
 			<!-- BEGIN: ALTER PASSWORD FORM  -->
-			<form action="/user/profile/information" id="p-alter-password-form" method="POST">
+			<form action="{{ route('user-password.update')}}" id="p-alter-password-form" method="POST">
 				@csrf
 				@method('PUT')
 

@@ -8,17 +8,28 @@
 	<div class="row">
 		<!-- Begin: g-form-wrapper -->
 		<div class="g-form-wrapper">
+			@if (session()->has('message_success'))
+			<!-- Begin: Alert Success -->
+			<div class="alert alert-success" role="alert" style="background-color: #def4e8; border-color: #e6f8ee;">
+				<h6 style="color: #257b50; font-weight: 400">{{ session()->get('message_success') }}</h6>
+			</div>
+			<!-- End: Alert Success -->
+			@endif
 			<h4>Informações Pessoais</h4>
 			<!-- BEGIN: EDIT PROFILE FORM  -->
-			<form action="{{ route('user-profile-information.update') }}" id="p-edit-profile-form" method="POST">
+			<form action="/admin/users/update" id="p-edit-profile-form" method="POST" enctype="multipart/form-data">
 				@csrf
 				@method('PUT')
+				<input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+
 				<!-- Begin: form-group -->
 				<div class="form-group">
 					<label for="job">Função</label>
 					<input type="text" name="job" class="form-control brd md" id="job"
 						value="{{ old('job', auth()->user()->job) }}" />
-					<small class="form-text text-danger">{!! $errors->first('job') !!}</small>
+					@error('job')
+					<small class="form-text text-danger">{{ $message }}</small>
+					@enderror
 				</div>
 				<!-- End: form-group -->
 
@@ -31,14 +42,15 @@
 				</div>
 				<!-- End: form-group -->
 
-				<!-- Begin: s-profile-media -->
-				<div class="s-profile-media form-group col-sm-12 col-md-12">
-					<div>
-						<img src="/images/profile_02.svg" alt="profile picture" title="Image Perfil">
-					</div>
-					<button class="btn btn-primary bbm">Alterar Foto</button>
+				<!-- Begin: g-uploader -->
+				<div class="g-uploader profile" style="margin-bottom: 8px;">
+					<img src="{{ !empty(auth()->user()->media) ? asset('/storage/images/' . auth()->user()->media) : asset('/images/cat.jpg') }}"
+						class="clickable" alt="upload image">
+					<input type="file" name="media" class="photo empty" style="display: none">
+					<input type="hidden" name="current_photo" value="{{ auth()->user()->media }}">
 				</div>
-				<!-- Begin: s-profile-media -->
+				<small class="form-text text-danger mb-1">{!!$errors->first('photos') !!}</small>
+				<!-- End: g-uploader -->
 
 				<!-- Begin: form-row -->
 				<div class="form-row">

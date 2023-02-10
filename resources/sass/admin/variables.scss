@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 
 // Dimensions
 $max: 100%;
-$half: $max / 2;
-$third: $max / 3;
-$quarter: $max / 4;
-$tenth: $max / 10;
+$half: calc($max / 2);
+$third: calc($max / 3);
+$quarter: calc($max / 4);
+$tenth: calc($max / 10);
 $rm: 0.8rem;
 $px: 8px;
 
 // Fonts
-$fontA: 'Poppins', sans-serif;
+$fontA: "Poppins", sans-serif;
 $font3: "DejaVu Sans", sans-serif;
 
 // Spacings:
 // margins, line heights
-$m: $rm / 2;
+$m: calc($rm / 2);
 $m1: $rm;
-$m2: $rm * 2;
-$m3: $rm * 3;
-$m4: $rm * 4;
-$m5: $rm * 5;
-$m6: $rm * 6;
-$m7: $rm * 7;
-$m8: $rm * 8;
-$m9: $rm * 9;
-$m10: $rm * 10;
+$m2: calc($rm * 2);
+$m3: calc($rm * 3);
+$m4: calc($rm * 4);
+$m5: calc($rm * 5);
+$m6: calc($rm * 6);
+$m7: calc($rm * 7);
+$m8: calc($rm * 8);
+$m9: calc($rm * 9);
+$m10: calc($rm * 10);
 
 // Spacings:
 // letters spacings
@@ -38,9 +38,8 @@ $ls5: 0.375rem;
 $ls6: 0.5rem;
 $ls7: 0.65rem;
 $ls8: 0.8rem;
-$ls9: 1.0rem;
+$ls9: 1rem;
 $ls10: 1.5rem;
-
 
 // Colors
 $white: #ffffff;
@@ -80,4 +79,3 @@ $info: rgba(20, 173, 159, 1);
 $light: rgba(223, 229, 239, 1);
 $dark: rgba(44, 51, 59, 1);
 $gold: #ab915d;
-

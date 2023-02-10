@@ -18,7 +18,7 @@ UPLOADERS
     margin-right: 2.85%;
     margin-bottom: $m3;
     cursor: pointer;
-    border-radius: 4px;
+    // border-radius: 4px;
 
     &:nth-of-type(8n) {
         margin-right: 0;
@@ -62,16 +62,21 @@ UPLOADERS
         font-size: 3.2rem;
         border-radius: 4px;
     }
+
+    &.profile,
+    &.profile img {
+        width: 64px;
+        height: 64px;
+        margin: $m3 0 $m5 0;
+        border-radius: 100%;
+    }
 }
 
 #g-profile-uploader {
-    position: absolute;
-    left: 24px;
-    bottom: -37px;
-    width: 89px !important;
+    position: relative;
+    width: 82px !important;
     height: auto;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin: calc($m2 * 1.55) 0 $m4 0;
     cursor: pointer;
     border-radius: $max;
 
@@ -79,7 +84,7 @@ UPLOADERS
         position: relative;
         width: $max;
         height: auto;
-        border: 6px solid $white;
+        //border: 6px solid $white;
         border-radius: $max;
         z-index: 3;
     }

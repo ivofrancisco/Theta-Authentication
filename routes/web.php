@@ -30,5 +30,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'verified']], fun
     Route::get('/home', [AdminController::class, 'home'])->name('admin.home');
 
     Route::get('/admin/users/{id}/profile', [UserController::class, 'profile'])->name('admin.users.profile');
+    Route::put('/admin/users/update', [UserController::class, 'update'])->name('admin.users.update');
 
 });

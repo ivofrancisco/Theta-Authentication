@@ -80,6 +80,9 @@ MAIN FORM'S STYLE
     }
 }
 
+/********************************
+MANAGE USER ROLE/ACCESS
+********************************/
 #s-manage-access-form {
     width: 27%;
     height: auto;
@@ -117,7 +120,7 @@ FORM CONTROL
     margin: 1px 0;
     height: 33px;
     line-height: 42px;
-    padding: 0 0.6rem;
+    padding: 6px 8px 6px 8px !important;
     color: $midGrey;
     font-family: $fontA;
     font-weight: 300;
@@ -187,10 +190,13 @@ FORM CONTROL
     }
 }
 
+/********************************
+FORM CONTROL TEXTAREA
+********************************/
 .form-control.textarea {
     height: 110px;
     margin-top: 0;
-    padding-top: 0 !important;
+    padding: 6px 8px 6px 8px !important;
     line-height: 24px;
     color: $midGrey;
     font-family: $fontA;

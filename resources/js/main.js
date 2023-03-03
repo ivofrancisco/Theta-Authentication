@@ -1,66 +1,58 @@
-// Toggle dropdown menu
-// from main navbar
-let gNavItem = document.querySelectorAll(".g-nav-item");
-document.body.addEventListener("click", function (e) {
-    toggleSubMenu(e, gNavItem, "ddown");
-});
+import "./utilities";
 
-// Toggle dropdown menu
-// from table rows
-let rowMenu = document.querySelectorAll(".g-row-item-manager");
-document.body.addEventListener("click", function (e) {
-    toggleSubMenu(e, rowMenu, "row-toggle");
-});
+import FileManager from "./FileManager";
+import ThetaEditor from "./ThetaEditor";
 
-// Toggles dropdown menu from t
-// op nav actions navbar (language switcher)
-let dropMenu = document.querySelectorAll(".dropped");
-document.body.addEventListener("click", function (e) {
-    toggleSubMenu(e, dropMenu, "drops");
-});
+/**
+ * Instantiating file manager
+ */
+const fileManager = new FileManager();
 
-// Show and hide tab nav content
-let tabLink = document.querySelectorAll(".s-dsh-tabs-link");
-let contentItem = document.querySelectorAll(".s-dsh-content-item");
-
-// Switching between content items;
-// (heading's tables)
-tabLink.forEach(function (tab, index, arr) {
-    tab.addEventListener("click", function () {
-        // Removing active state
-        updateClass(tabLink, "active");
-        // Hiding all content items (tabs)
-        document
-            .querySelector(".s-dsh-content-item.opened")
-            .classList.remove("opened");
-        // Adding active state to navbar link
-        // that was clicked
-        this.classList.add("active");
-        // Showing tab that matches the navbar
-        // link that was clicked
-        contentItem[index].classList.add("opened");
-    });
-});
-
-// Update Class from a
-// selected element
-function updateClass(group, className) {
-    group.forEach((item) => {
-        item.classList.remove(className);
-    });
-}
-
-// Toggle a dropdown menu
-function toggleSubMenu(element, group, targetClass) {
-    if (element.target.classList.contains(targetClass)) {
-        let parent = element.target.parentElement.classList;
-        if (parent.contains("opened")) {
-            parent.remove("opened");
-        } else {
-            updateClass(group, "opened");
-            parent.add("opened");
-        }
-    } else {
-        updateClass(group, "opened");
+/**
+ * File upload related tasks
+ */
+// Opening file folder
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("clickable")) {
+        fileManager.open(e);
     }
-}
+});
+
+// Change file information
+document.body.addEventListener("change", function (e) {
+    if (e.target.classList.contains("photo")) {
+        fileManager.replaceFile(e.target);
+    }
+});
+
+/**
+ * Instantiating ThetaEditor editor class
+ */
+const editor = new ThetaEditor();
+// Iframe element
+let iframe = document.querySelector("#richTextEditor");
+
+/**
+ * Gallery related tasks
+ */
+
+// FIle uploader wrapper
+let uploads = document.querySelector(".s-uploads-wrapper");
+
+// Changing file information on
+// uploader element
+document.body.addEventListener("change", function (e) {
+    if (e.target.classList.contains("empty")) {
+        fileManager.replaceFile(e.target);
+        fileManager.addUploader(uploads);
+    } else if (e.target.classList.contains("photo")) {
+        fileManager.replaceFile(e.target);
+    }
+});
+
+// Removing a specific photo from the DOM
+document.querySelectorAll(".removable").forEach(function (icon) {
+    icon.addEventListener("click", function () {
+        fileManager.removeFile(this, "remove[]");
+    });
+});

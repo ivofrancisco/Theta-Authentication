@@ -44,6 +44,7 @@
 
 				<!-- Begin: g-uploader -->
 				<div class="g-uploader profile" style="margin-bottom: 8px;">
+					<h5>Atualizar Foto</h5>
 					<img src="{{ !empty(auth()->user()->media) ? asset('/storage/images/' . auth()->user()->media) : asset('/images/cat.jpg') }}"
 						class="clickable" alt="upload image">
 					<input type="file" name="media" class="photo empty" style="display: none">
@@ -157,6 +158,17 @@
 				A palavra-passe foi atualizada com sucesso.
 			</div>
 			@endif
+
+			@if ($errors->updatePassword->any())
+			<div class="notification reject fl-wrap">
+				@foreach ($errors->updatePassword->all() as $error)
+				<p class="form-text text-danger">
+					{{ $error }}
+				</p>
+				@endforeach
+			</div>
+			@endif
+
 			<!-- BEGIN: ALTER PASSWORD FORM  -->
 			<form action="{{ route('user-password.update')}}" id="p-alter-password-form" method="POST">
 				@csrf
@@ -167,7 +179,9 @@
 					<label for="old-password">Senha Antiga</label>
 					<input type="password" name="current_password" class="form-control brd md" id="old-password">
 					@error('current_password')
-					<small class="form-text text-danger">{{ $message }}</small>
+					<small class="form-text text-danger">
+						{{ $errors->updatePassword->get('current_password') }}
+					</small>
 					@enderror
 				</div>
 				<!-- End: form-group -->
@@ -176,7 +190,9 @@
 					<label for="new-password">Senha Nova</label>
 					<input type="password" name="password" class="form-control brd md" id="new-password">
 					@error('password')
-					<small class="form-text text-danger">{{ $message }}</small>
+					<small class="form-text text-danger">
+						{{ $errors->updatePassword->get('password') }}
+					</small>
 					@enderror
 				</div>
 				<!-- End: form-group -->
@@ -186,7 +202,9 @@
 					<input type="password" name="password_confirmation" class="form-control brd md"
 						id="confirm-password">
 					@error('password_confirmation')
-					<small class="form-text text-danger">{{ $message }}</small>
+					<small class="form-text text-danger">
+						{{ $errors->updatePassword->get('password_confirmation') }}
+					</small>
 					@enderror
 				</div>
 				<!-- End: form-group -->

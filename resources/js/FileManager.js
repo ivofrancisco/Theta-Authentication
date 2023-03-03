@@ -2,10 +2,6 @@
  * Manages files
  */
 class FileManager {
-    constructor() {
-        console.log("hello from file manager");
-    }
-
     //Open file upload dialog box
     open(element) {
         element.target.nextElementSibling.click();
@@ -49,8 +45,6 @@ class FileManager {
 
     // Inserts file uploader into the DOM
     addUploader(wrapper) {
-        console.log("uploader working");
-
         let div = document.createElement("div");
         div.setAttribute("class", "g-uploader loaded gallery");
         const uploader = `
